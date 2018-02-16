@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Parse Prompt</title>
+  <script language="JavaScript">
+    var input = window.prompt("Enter a sentence");
+  </script>
+</head>
+
+<body>
+  <table>
+    <tr Align='Center'>
+      <th Width='100'>
+        <H1>input</H1>
+      </th>
+    </tr>
+    <script language="JavaScript">
+      function parseStrings(input) {
+        var parse = input.split(' ');
+        var array = new Array();
+        for (let i = 0; i < parse.length; i++) {
+            array.push("<tr Align='Center'><td>" + parse[i] + "</td></tr>");
+        }
+        return array;
+      }
+      document.writeln(parseStrings(input));
+    </script>
+  </table>
+</body>
+
+</html>
