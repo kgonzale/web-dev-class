@@ -1,0 +1,11 @@
+body{
+   background: gray;
+}
+
+.replaced {
+   font-size:40px;
+}
+
+.purple {
+   color: purple;
+}
