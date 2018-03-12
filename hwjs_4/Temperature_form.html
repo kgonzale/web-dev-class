@@ -10,14 +10,30 @@
 
             var farenheit = () => {
                 let input = document.getElementById('entry_input').value;
-                let result = (input - 32) * (5/9) ;
+
+                if(isNaN(input) || input == ''){
+                    window.alert("Input is invalid");
+                    document.getElementById('entry_input').value = "";
+                    return;
+                }    
+
+                let result = (input - 32) * (5/9);
                 document.getElementById('converted_input').value = result;
+                window.alert("You clicked on F to C, where the value input is: " + input + " and the result is: " + result);
             }
 
             var celsius = () => {
                 let input = document.getElementById('entry_input').value;
+
+                if(isNaN(input) || input ==''){
+                    window.alert("Input is invalid");
+                    document.getElementById('entry_input').value = "";
+                    return;
+                }
+
                 let result = input * 1.8 + 32;
                 document.getElementById('converted_input').value = result;
+                window.alert("You clicked on C to F, where the value input is: " + input + " and the result is: " + result);
             }
 
         </script>
