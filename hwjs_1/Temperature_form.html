@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <title>Temperature Conversion</title>
+    </head>
+
+    <body>
+        <script>
+
+            var farenheit = () => {
+                let input = document.getElementById('entry_input').value;
+                let result = (input - 32) * (5/9) ;
+                document.getElementById('converted_input').value = result;
+            }
+
+            var celsius = () => {
+                let input = document.getElementById('entry_input').value;
+                let result = input * 1.8 + 32;
+                document.getElementById('converted_input').value = result;
+            }
+
+        </script>
+        
+        <h1>Conversions</h1>
+        <form method="POST">
+                Entry temperature: <input id="entry_input" type="number" size=30>
+		        <br><br>
+                Converted temperature: <input type="number" id="converted_input" size=30>
+                <br><br>
+
+                <input type="button" value="F to C" onClick="farenheit();">
+                <input type="button" value="C to F" onClick="celsius();">
+        </form>
+    </body>
+</html>
