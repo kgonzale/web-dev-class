@@ -14,6 +14,7 @@
                 if(isNaN(input) || input == ''){
                     window.alert("Input is invalid");
                     document.getElementById('entry_input').value = "";
+                    document.getElementById('entry_input').focus();
                     return;
                 }    
 
@@ -28,6 +29,7 @@
                 if(isNaN(input) || input ==''){
                     window.alert("Input is invalid");
                     document.getElementById('entry_input').value = "";
+                    document.getElementById("myTextField").focus();
                     return;
                 }
 
@@ -35,6 +37,11 @@
                 document.getElementById('converted_input').value = result;
                 window.alert("You clicked on C to F, where the value input is: " + input + " and the result is: " + result);
             }
+
+            var load = () => {
+                document.getElementById('entry_input').focus();
+            } 
+            window.onload = load;
 
         </script>
         
