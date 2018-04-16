@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Create a web page which shows pictures of your last break/vacation, things about your home, things about your work, your family, or some other similar theme
+    – The web page should have a drop down options list (or other type of selection mechanism) to pick a picture
+    – Then using events and JS, display the selected image on the screen (do not link out to aseparate document) 
+
+
+
+    then have an image tag placed appropriately above or below the form and set it's image source to the local image path or the URL
+in that displayImage() function
+-->
+
+<head>
+    <title>DHTML & Forms Homework</title>
+</head>
+
+<body>
+    <h1>Kevin Gonzalez: Vacation, home, work, family</h1>
+   
+    <form name="myForm">
+        <select id="selectedValue">
+            <option>Last Vacation</option>
+            <option>My House</option>
+            <option>Work</option>
+            <option>My Family</option>
+        </select>
+    </form>
+    <br>
+    <img id="woah" />
+    
+    <script>
+        const displayImage = (url) => {
+            document.getElementById("woah").src = url;
+        }
+
+        const selectId = document.getElementById('selectedValue');
+
+
+        selectId.addEventListener('change', function(event) {
+            if(event.target.value === 'Last Vacation'){
+                displayImage("./images/option1.png");
+            }
+            else if(event.target.value === 'My House'){
+                displayImage("./images/option2.jpg");
+            }
+            else if(event.target.value === 'Work'){
+                displayImage("./images/option3.jpg");
+            }
+            else if(event.target.value === 'My Family'){
+                displayImage("./images/option4.jpg");
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
