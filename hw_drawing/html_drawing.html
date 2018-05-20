@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+    <head> 
+    <title>Drawing Homework</title>
+     
+    <script>
+        function drawing() {
+            var x = document.getElementById("canvas");
+            var y = x.getContext("2d");
+
+            y.font = "40px sans-serif";
+            y.strokeText("Woodpecker Head", 100, 200);
+
+            y.beginPath();
+            y.bezierCurveTo(500, 247, 70, 535, 50, 235);
+            y.bezierCurveTo(500, 235, 70, 572.5, 20, 272);
+            y.bezierCurveTo(500, 290, 70, 512, 75, 330);
+            
+            y.closePath();
+            y.fill(); 
+        }
+         </script>
+     
+</head>
+ 
+<body onload="drawing()">
+     <h1>Drawing Homework</h1>
+     <canvas id="canvas" width="800" height="800"></canvas>
+     
+</body>
+ 
+</html>

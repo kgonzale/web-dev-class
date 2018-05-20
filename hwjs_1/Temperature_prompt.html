@@ -1,0 +1,21 @@
+<HTML>
+	<HEAD><TITLE>Temperature Conversion</TITLE></HEAD>
+		<SCRIPT LANGUAGE = "JavaScript">
+			var celsius, s1;
+			do {
+				s1 = window.prompt("Enter number in celsius:", "0");
+				celsius = parseInt(s1);
+				
+				if (isNaN(celsius)){
+					alert("Input is not numeric");
+				}
+			}
+		
+			while(isNaN(celsius));
+
+			var fahrenheit = celsius * 1.8 + 32;
+			document.writeln("<H1>Your input: " + celsius + ", converted to fahrenheit is: " + fahrenheit + "</H1>");
+		
+		</SCRIPT>
+	<BODY></BODY>
+</HTML>
